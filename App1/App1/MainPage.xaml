@@ -1,0 +1,54 @@
+﻿<Page
+    x:Class="App1.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Loaded="Page_Loaded">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="132,52,0,0" VerticalAlignment="Top"/>
+        <CaptureElement HorizontalAlignment="Left" Height="100" Margin="112,110,0,0" VerticalAlignment="Top" Width="100"/>
+
+        <Pivot Grid.Row="1">
+            <PivotItem Header="最新图片">
+                <ItemsControl>
+                    <Image></Image>
+                    <Image></Image>
+                    <Image></Image>
+                    <Image></Image>
+                    <Button Content="图文配"  x:Name="tuwenbtn" Click="tuwenbtn_Click"></Button>
+                    <Button Content="修图"  x:Name="addeffectbtn" Click="addeffectbtn_Click"></Button>
+                    <Button Content="上传"  x:Name="uploadbtn" Click="uploadbtn_Click"></Button>
+                </ItemsControl>
+            </PivotItem>
+            <PivotItem Header="推荐图片">
+                <ListBox x:Name="listbox">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Grid  Tapped="kindgrid_Tap"  Height="150" Width="200" Margin="0,0,16,16">
+                                <Grid.Background>
+                                    <SolidColorBrush  Color="#f7f7f7"></SolidColorBrush>
+                                </Grid.Background>
+                                <Image Source="{Binding OpusImage}"  Stretch="UniformToFill"></Image>
+                            </Grid>
+                            <!--<Grid Height="150" Width="200" Margin="0,0,16,16" Tapped="kindgrid_Tap" >
+                                <Grid.Background>
+                                    --><!--<ImageBrush ImageSource="Assets/bottom.png"></ImageBrush>--><!--
+                                    <ImageBrush Stretch="Fill" ImageSource="{Binding url}"></ImageBrush>
+                                </Grid.Background>
+                                --><!--Image Height="156" Width="208"  Source="{Binding url,Converter={StaticResource UrlConverotr}}">
+
+                                    </Image>--><!--
+                                <TextBlock Margin="0,0,0,30" TextAlignment="Center" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="{Binding name}" Style="{StaticResource twofourwhitetext}"></TextBlock>
+                            </Grid>-->
+
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </PivotItem>
+           
+        </Pivot>
+    </Grid>
+</Page>
