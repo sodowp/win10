@@ -208,7 +208,7 @@ namespace App1
 
         private void rebtn_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Frame.Navigate(typeof(RePage));
         }
 
         private void loginbtn_Click(object sender, RoutedEventArgs e)

@@ -112,6 +112,9 @@
     <Compile Include="views\PictureDeatailPage.xaml.cs">
       <DependentUpon>PictureDeatailPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="views\RePage.xaml.cs">
+      <DependentUpon>RePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="views\tuwenPage.xaml.cs">
       <DependentUpon>tuwenPage.xaml</DependentUpon>
     </Compile>
@@ -224,6 +227,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="views\PictureDeatailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\RePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
