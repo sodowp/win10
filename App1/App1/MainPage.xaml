@@ -18,6 +18,8 @@
                     <Image></Image>
                     <Image></Image>
                     <Image></Image>
+                    <Button Content="注册"  x:Name="rebtn" Click="rebtn_Click"></Button>
+                    <Button Content="登录"  x:Name="loginbtn" Click="loginbtn_Click"></Button>
                     <Button Content="图文配"  x:Name="tuwenbtn" Click="tuwenbtn_Click"></Button>
                     <Button Content="修图"  x:Name="addeffectbtn" Click="addeffectbtn_Click"></Button>
                     <Button Content="上传"  x:Name="uploadbtn" Click="uploadbtn_Click"></Button>
@@ -27,11 +29,11 @@
                 <ListBox x:Name="listbox">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
-                            <Grid  Tapped="kindgrid_Tap"  Height="150" Width="200" Margin="0,0,16,16">
+                            <Grid  Tapped="kindgrid_Tap"  Margin="0,0,16,16">
                                 <Grid.Background>
                                     <SolidColorBrush  Color="#f7f7f7"></SolidColorBrush>
                                 </Grid.Background>
-                                <Image Source="{Binding OpusImage}"  Stretch="UniformToFill"></Image>
+                                <Image Source="{Binding OpusImage}"  Tapped="Image_Tapped" Stretch="UniformToFill"></Image>
                             </Grid>
                             <!--<Grid Height="150" Width="200" Margin="0,0,16,16" Tapped="kindgrid_Tap" >
                                 <Grid.Background>

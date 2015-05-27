@@ -106,6 +106,12 @@
     <Compile Include="views\addeffectPage.xaml.cs">
       <DependentUpon>addeffectPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="views\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\PictureDeatailPage.xaml.cs">
+      <DependentUpon>PictureDeatailPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="views\tuwenPage.xaml.cs">
       <DependentUpon>tuwenPage.xaml</DependentUpon>
     </Compile>
@@ -122,6 +128,77 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Image\about1300.jpg" />
+    <Content Include="Image\baomingzhong.png" />
+    <Content Include="Image\bisai.jpg" />
+    <Content Include="Image\bisai1.jpg" />
+    <Content Include="Image\cansai.png" />
+    <Content Include="Image\canyu.jpg" />
+    <Content Include="Image\chat_1.jpg" />
+    <Content Include="Image\chat_2.jpg" />
+    <Content Include="Image\chat_3.jpg" />
+    <Content Include="Image\chuangyi.jpg" />
+    <Content Include="Image\collection.png" />
+    <Content Include="Image\comments.png" />
+    <Content Include="Image\contest_official.jpg" />
+    <Content Include="Image\defaultpic.png" />
+    <Content Include="Image\dongtai.png" />
+    <Content Include="Image\dongwu.jpg" />
+    <Content Include="Image\fengguang.jpg" />
+    <Content Include="Image\girl.jpg" />
+    <Content Include="Image\huaxu.png" />
+    <Content Include="Image\hunli.jpg" />
+    <Content Include="Image\jiantou.png" />
+    <Content Include="Image\jiepai.jpg" />
+    <Content Include="Image\jingwu.jpg" />
+    <Content Include="Image\jishi.jpg" />
+    <Content Include="Image\lixian.png" />
+    <Content Include="Image\lixina.jpg" />
+    <Content Include="Image\load135-2.jpg" />
+    <Content Include="Image\load135.jpg" />
+    <Content Include="Image\loginBackground.jpg" />
+    <Content Include="Image\logo.jpg" />
+    <Content Include="Image\logo.png" />
+    <Content Include="Image\lvxing.jpg" />
+    <Content Include="Image\lvxing1.jpg" />
+    <Content Include="Image\lvyou.jpg" />
+    <Content Include="Image\message.jpg" />
+    <Content Include="Image\moren-bg.jpg" />
+    <Content Include="Image\mxfb.jpg" />
+    <Content Include="Image\mxfbb.jpg" />
+    <Content Include="Image\organization60.jpg" />
+    <Content Include="Image\photo.jpg" />
+    <Content Include="Image\pingshenzhong.png" />
+    <Content Include="Image\pinlun.png" />
+    <Content Include="Image\play.png" />
+    <Content Include="Image\playing.png" />
+    <Content Include="Image\recording.png" />
+    <Content Include="Image\renxiang.jpg" />
+    <Content Include="Image\see.png" />
+    <Content Include="Image\shangchuan.png" />
+    <Content Include="Image\shenghuo.jpg" />
+    <Content Include="Image\shouji.jpg" />
+    <Content Include="Image\start.png" />
+    <Content Include="Image\tatiezi135.jpg" />
+    <Content Include="Image\tazuzhi135.jpg" />
+    <Content Include="Image\tiezi.jpg" />
+    <Content Include="Image\tiezi.png" />
+    <Content Include="Image\toupiaozhong.png" />
+    <Content Include="Image\vip.png" />
+    <Content Include="Image\voice135.jpg" />
+    <Content Include="Image\waipai.jpg" />
+    <Content Include="Image\waipai1.jpg" />
+    <Content Include="Image\weiju.jpg" />
+    <Content Include="Image\xiaoxi.png" />
+    <Content Include="Image\xin - ∏±±g.png" />
+    <Content Include="Image\xin.png" />
+    <Content Include="Image\yishu.jpg" />
+    <Content Include="Image\zan.png" />
+    <Content Include="Image\zhiding.jpg" />
+    <Content Include="Image\zhiwu.jpg" />
+    <Content Include="Image\zuopin.png" />
+    <Content Include="Image\zuzhi.jpg" />
+    <Content Include="Image\zuzi.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\Logo.scale-100.png" />
     <Content Include="Assets\SmallLogo.scale-100.png" />
@@ -139,6 +216,14 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="views\addeffectPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\LoginPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\PictureDeatailPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -188,6 +273,9 @@
       <Project>{1aa6cbc8-5794-4416-9b29-db1c459a4b2a}</Project>
       <Name>ModelClassLibrary</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Converotr\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

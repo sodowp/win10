@@ -1,0 +1,52 @@
+﻿<Page
+    x:Class="App1.views.LoginPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App1.views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid x:Name="LayoutRoot" Background="Transparent">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition></RowDefinition>
+
+            </Grid.RowDefinitions>
+
+            <StackPanel Height="65" Background="#009688" VerticalAlignment="Top" Orientation="Horizontal">
+
+                <TextBlock Margin="150,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+                <!--<Image ></Image>-->
+
+            </StackPanel>
+            <Grid Grid.Row="1" Background="White">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+
+                    <RowDefinition Height="65"></RowDefinition>
+                    <RowDefinition Height="35"></RowDefinition>
+                    <RowDefinition Height="65"></RowDefinition>
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Row="1" HorizontalAlignment="Center">
+                    <Border BorderThickness="1" BorderBrush="#009688">
+                        <TextBox x:Name="userxntxt" InputScope="TelephoneNumber" FontSize="15" Height="65"></TextBox>
+                    </Border>
+                    <Border BorderThickness="1" Margin="0,15,0,0" BorderBrush="#009688">
+                        <TextBox x:Name="passwordbox"  FontSize="16"  Width="300" Height="65"></TextBox>
+                    </Border>
+                </StackPanel>
+                <StackPanel Margin="0,0,0,12" HorizontalAlignment="Center" Grid.Row="2" Orientation="Horizontal">
+
+                    <Button  FontSize="18" x:Name="loginbtn" Click="loginbtn_Click" Background="#009688" Foreground="Black" Content="首度号登录"></Button>
+                    <Button  FontSize="18"  x:Name="phoneloginbtn" Click="phoneloginbtn_Click" Background="#009688" Foreground="Black" Content="手机号登录"></Button>
+                </StackPanel>
+                <Button Margin="0" VerticalAlignment="Bottom"  Grid.Row="4" HorizontalContentAlignment="Left" FontSize="18"   x:Name="forgetbtn" Width="139" Click="forgetbtn_Click" Foreground="Black" Background="Orange" HorizontalAlignment="Right"  Content="忘记密码"></Button>
+                <ProgressBar  Visibility="Collapsed" Margin="0,15,0,21" Grid.Row="3" x:Name="progressBar" IsIndeterminate="True" />
+            </Grid>
+
+        </Grid>
+    </Grid>
+</Page>

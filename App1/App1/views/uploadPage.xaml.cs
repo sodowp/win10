@@ -41,7 +41,7 @@ namespace App1.views
         }
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            loadimg.Source = App.bmpimage;
+           // loadimg.Source = App.bmpimage;
             base.OnNavigatedTo(e);
         }
         private void can_Checked(object sender, RoutedEventArgs e)
@@ -75,13 +75,13 @@ namespace App1.views
             hasnotfinish = true;
             Dictionary<string, string> submitOpusDictionary = new Dictionary<string, string>();
             submitOpusDictionary.Add(CommonString.reqkey, CommonString.MethName.submitOpus.ToString());
-            submitOpusDictionary.Add(CommonString.uidkey, App.User.UserId);
+            submitOpusDictionary.Add(CommonString.uidkey, App.userid);
             submitOpusDictionary.Add(CommonString.appkey, CommonString.appValue);
             submitOpusDictionary.Add(CommonString.stpkey, CommonString.stpValue);
             submitOpusDictionary.Add(CommonString.sodotpKey, phototype.ToString());
             submitOpusDictionary.Add(CommonString.dataTypekey, "aac");
             //string info = DeviceStatus.DeviceManufacturer + ",Windows" + System.Environment.OSVersion.Version.ToString().Substring(0, 3);
-            submitOpusDictionary.Add(CommonString.dmkey, "windows8rt");
+            submitOpusDictionary.Add(CommonString.dmkey, "windows10");
             submitOpusDictionary.Add(CommonString.formatkey, "pb");
             if (onebuilder == null)
             {
@@ -134,7 +134,7 @@ namespace App1.views
             openPicker.ViewMode = PickerViewMode.Thumbnail;
             openPicker.SuggestedStartLocation = PickerLocationId.PicturesLibrary;
             openPicker.FileTypeFilter.Add(".jpg");
-            openPicker.FileTypeFilter.Add(".gif");
+            //openPicker.FileTypeFilter.Add(".gif");
             openPicker.FileTypeFilter.Add(".png");
             openPicker.FileTypeFilter.Add(".bmp");
 
@@ -145,16 +145,16 @@ namespace App1.views
             //    {
             //原图
             IRandomAccessStream randomAccessStream = await fileList.OpenReadAsync();
-            Stream stream = randomAccessStream.AsStream();
-            imagedate = new byte[stream.Length];
-            stream.Read(imagedate, 0, (int)stream.Length);
+           
 
             BitmapImage bmp = new BitmapImage();
             bmp.SetSource(randomAccessStream);
 
 
             loadimg.Source = bmp;
-
+            Stream stream = randomAccessStream.AsStream();
+            imagedate = new byte[stream.Length];
+            stream.Read(imagedate, 0, (int)stream.Length);
             //ImageItem imageItemBig = new ImageItem();
             //imageItemBig.ImageBig.SetSource(randomAccessStream);
             //imageItemListBig.Add(imageItemBig);

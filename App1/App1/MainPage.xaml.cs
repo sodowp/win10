@@ -44,7 +44,9 @@ namespace App1
 
         private void kindgrid_Tap(object sender, TappedRoutedEventArgs e)
         {
-
+            Grid OBJ = sender as Grid;
+            PBFeed onepb = (PBFeed)OBJ.DataContext;
+            App.transferfeed = onepb;
         }
         private void GetLatestItems(string m)
         {
@@ -69,7 +71,7 @@ namespace App1
             //{
             //    gflDictionary.Add(CommonString.uidkey, App.User.UserId);
             //}
-            gflDictionary.Add(CommonString.uidkey, "54a1578d0cf292a17cc0669d");
+            gflDictionary.Add(CommonString.uidkey, App.userid);
             gflDictionary.Add(CommonString.pgokey, CommonString.pgoValue);
             gflDictionary.Add(CommonString.pgtkey, "19");
             gflDictionary.Add(CommonString.tpkey, ((int)sodoshot.Common.CommonString.FeedListType.FeedListTypeRecommend).ToString());
@@ -157,35 +159,61 @@ namespace App1
 
         private void uploadbtn_Click(object sender, RoutedEventArgs e)
         {
-            getpicfile();
+         //   getpicfile();
             this.Frame.Navigate(typeof(uploadPage));
         }
         private async void getpicfile()
         {
-            FileOpenPicker openPicker = new FileOpenPicker();
+            try
+            {
+                FileOpenPicker openPicker = new FileOpenPicker();
 
-            openPicker.ViewMode = PickerViewMode.Thumbnail;
-            openPicker.SuggestedStartLocation = PickerLocationId.PicturesLibrary;
-            openPicker.FileTypeFilter.Add(".jpg");
-            openPicker.FileTypeFilter.Add(".gif");
-            openPicker.FileTypeFilter.Add(".png");
-            openPicker.FileTypeFilter.Add(".bmp");
+                openPicker.ViewMode = PickerViewMode.Thumbnail;
+                openPicker.SuggestedStartLocation = PickerLocationId.PicturesLibrary;
+                openPicker.FileTypeFilter.Add(".jpg");
+                openPicker.FileTypeFilter.Add(".gif");
+                openPicker.FileTypeFilter.Add(".png");
+                openPicker.FileTypeFilter.Add(".bmp");
 
-            var fileList = await openPicker.PickSingleFileAsync();
-            //if (fileList.Count > 0)
-            //{
-            //    foreach (var item in fileList)
-            //    {
-            //原图
-            IRandomAccessStream randomAccessStream = await fileList.OpenReadAsync();
-            Stream stream = randomAccessStream.AsStream();
-            imagedate = new byte[stream.Length];
-            stream.Read(imagedate, 0, (int)stream.Length);
+                var fileList = await openPicker.PickSingleFileAsync();
+                //if (fileList.Count > 0)
+                //{
+                //    foreach (var item in fileList)
+                //    {
+                //原图
+                IRandomAccessStream randomAccessStream = await fileList.OpenReadAsync();
+                Stream stream = randomAccessStream.AsStream();
+                imagedate = new byte[stream.Length];
+                stream.Read(imagedate, 0, (int)stream.Length);
 
-            BitmapImage bmp = new BitmapImage();
-            bmp.SetSource(randomAccessStream);
-            App.bmpimage = bmp;
+                BitmapImage bmp = new BitmapImage();
+                bmp.SetSource(randomAccessStream);
+                App.bmpimage = bmp;
+            }
+            catch (Exception)
+            {
+
+              
+            }
+            
         }
 
+        private void Image_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            Image senderimg = sender as Image;
+            App.transfersource = senderimg.Source;
+            App.transferfeed = (senderimg.DataContext as PBFeed);
+            this.Frame.Navigate(typeof(PictureDeatailPage));
+        }
+
+        private void rebtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void loginbtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(LoginPage));
+        }
     }
 }

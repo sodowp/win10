@@ -14,16 +14,17 @@
             </TransitionCollection>
         </Grid.ChildrenTransitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="140"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <!-- Back button and page title -->
-        <Grid>
+        <!--<Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="120"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
+            
             <Button x:Name="backButton" Margin="39,59,39,0" Command="{Binding NavigationHelper.GoBackCommand, ElementName=pageRoot}"
                         Style="{StaticResource NavigationBackButtonNormalStyle}"
                         VerticalAlignment="Top"
@@ -32,10 +33,10 @@
                         AutomationProperties.ItemType="Navigation Button"/>
             <TextBlock x:Name="pageTitle"  Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
                         IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40"/>
-        </Grid>
+        </Grid>-->
 
         <!-- Back button and page title -->
-
+        <ScrollViewer>
         <Grid x:Name="LayoutRoot" Grid.Row="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
@@ -43,11 +44,11 @@
             </Grid.RowDefinitions>
 
             <!--TitlePanel 包含应用程序的名称和页标题-->
-            <StackPanel Grid.Row="0" Margin="21,17,0,12">
-                <!--<ProgressBar Margin="0,15,0,0" x:Name="progressBar"  Visibility="Collapsed" IsIndeterminate="True"/>-->
+            <!--<StackPanel Grid.Row="0" Margin="21,17,0,12">
+                --><!--<ProgressBar Margin="0,15,0,0" x:Name="progressBar"  Visibility="Collapsed" IsIndeterminate="True"/>--><!--
                 <TextBlock Text="" x:Name="tittletb"/>
 
-            </StackPanel>
+            </StackPanel>-->
 
             <!--ContentPanel - 在此处放置其他内容-->
             <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
@@ -59,26 +60,26 @@
                     <RowDefinition  Height="*"></RowDefinition>
                     <RowDefinition  Height="Auto"></RowDefinition>
                 </Grid.RowDefinitions>
-                <Grid  MinHeight="250" Grid.Row="0">
-                    <Grid.RowDefinitions>
+                <Grid   Grid.Row="0">
+                    <!--<Grid.RowDefinitions>
                         <RowDefinition Height="Auto"></RowDefinition>
                         <RowDefinition Height="50"></RowDefinition>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
+                    </Grid.RowDefinitions>-->
+                    <!--<Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"></ColumnDefinition>
                         <ColumnDefinition Width="25"></ColumnDefinition>
                         <ColumnDefinition Width="*"></ColumnDefinition>
-                    </Grid.ColumnDefinitions>
+                    </Grid.ColumnDefinitions>-->
                     <!--<Border  Grid.Column="0" >
                     
                 </Border>-->
-                    <Image Grid.Row="0" Margin="12,0,0,0" Width="600" Height="300" Stretch="Fill" Tapped="loadimg_Tapped" x:Name="loadimg" Source="/Image/load135.jpg"></Image>
-                    <StackPanel  Grid.Row="1" Grid.Column="0" Orientation="Horizontal">
+                    <Image Grid.Row="0" Margin="0,0,0,0"  Stretch="Fill" Tapped="loadimg_Tapped" x:Name="loadimg" Source="/Image/load135-2.jpg"></Image>
+                    <!--<StackPanel  Grid.Row="1" Grid.Column="0" Orientation="Horizontal">
                         <TextBlock VerticalAlignment="Center" Foreground="Black"  x:Name="tbup" HorizontalAlignment="Left"  TextAlignment="Center" Margin="10,6,10,4" TextWrapping="Wrap" Text=""  Width="100" Height="30"/>
-                        <Button Visibility="Collapsed" FontSize="15" Click="Button_Click" BorderThickness="0" Content="旋转90度" Foreground="Black" Margin="0,0,0,-14"/>
+                        --><!--<Button Visibility="Collapsed" FontSize="15" Click="Button_Click" BorderThickness="0" Content="旋转90度" Foreground="Black" Margin="0,0,0,-14"/>--><!--
                         <Image Margin="35,0,0,0" Height="25" Width="25"  x:Name="xuanimg"  Source="/Assets/xuan.jpg"></Image>
-                    </StackPanel>
-                    <Button Content="上传" Click="Button_Click_1" Grid.Column="2" HorizontalAlignment="Left" Margin="308,44,0,0" VerticalAlignment="Top"/>
+                    </StackPanel>-->
+                  
 
                     <!--<Border  Background="YellowGreen"   Grid.Column="2"></Border>-->
                     <!--<Image Grid.Column="2" x:Name="recordimg" Margin="0,0,12,0" Stretch="Fill" Source="/Image/voice135.jpg">
@@ -93,6 +94,7 @@
                     <TextBox TextWrapping="Wrap"  AcceptsReturn="True"   x:Name="destbox" MinHeight="150"  Grid.Row="0" ></TextBox>
 
                 </Grid>
+                <Button Content="上传" Click="Button_Click_1" Grid.Row="3" HorizontalAlignment="Center"  VerticalAlignment="Top"/>
                 <!--<StackPanel Grid.Row="3" Orientation="Horizontal" VerticalAlignment="Center">
                     <TextBlock VerticalAlignment="Center" Margin="12,0,0,0" Text="" Grid.Row="3" ></TextBlock>
                     <CheckBox  Margin="200,0,0,0" BorderBrush="YellowGreen"  Unchecked="can_Unchecked" Checked="can_Checked" Foreground="Black" IsThreeState="False" x:Name="isagreecheckbox"></CheckBox>
@@ -123,5 +125,6 @@
 
             </Grid>
         </Grid>
+        </ScrollViewer>
     </Grid>
 </Page>

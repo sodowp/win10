@@ -3,54 +3,11 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:App1"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:convertor="clr-namespace:sodoshot.Converotr"
     RequestedTheme="Light">
     <Application.Resources>
-        <!--<convertor:Numbertoriqi x:Key="Numbertoriqi">
-        </convertor:Numbertoriqi>
-        <convertor:PicDefaultimgConvertor x:Key="PicDefaultimgConvertor">
-        </convertor:PicDefaultimgConvertor>
-        <convertor:geTostringConvertor x:Key="geconvortor">
-        </convertor:geTostringConvertor>
-        <convertor:rankconvertorClass x:Key="onerankconvertor">
-        </convertor:rankconvertorClass>
-        <convertor:JoinersTypeConvertor x:Key="joinersTypeConvertor">
-        </convertor:JoinersTypeConvertor>
-        <convertor:BisaiconvertorClass x:Key="oneBisaiconvertorClass">
-        </convertor:BisaiconvertorClass>
-        <convertor:MessagetypeConvertor x:Key="messagetypeConvertor">
-        </convertor:MessagetypeConvertor>
-        <convertor:TraffictypeConvertor x:Key="traffictypeConvertor">
-        </convertor:TraffictypeConvertor>
-        <convertor:contestStatusconvertor x:Key="contestStatusconvertorone"></convertor:contestStatusconvertor>
-        <convertor:ActivityTypeConertor x:Key="activityTypeConertor">
-        </convertor:ActivityTypeConertor>
-        <convertor:Contestlistvisibility x:Key="contestlistvisibility">
-        </convertor:Contestlistvisibility>
-        <convertor:PBFeedTimeconverotrClass x:Key="PBFeedTimeconverotrClassone">
-        </convertor:PBFeedTimeconverotrClass>
-        <Coding4FunConverters:BooleanToVisibilityConverter x:Key="boolvisibility">
-        </Coding4FunConverters:BooleanToVisibilityConverter>
-        <convertor:ImageConvertor x:Key="defaultImage" />
-        <convertor:xingbiepicconvertor x:Key="xingbiepicconver1" />
-        <convertor:CacheimageConvertor x:Key="CacheimageConvertor" />
-        <convertor:OpuswordConvertor x:Key="opuswordConvertor" />
-        <convertor:TimeConvertor x:Key="timeConvertor" />
-        <convertor:OtherPicCacheimgConvertor x:Key="otherpicCacheimgConvertor" />
-        <convertor:VipConvertor x:Key="vipconvertor" />
-        <convertor:UserLevelConvertor x:Key="userLevelConvertor" />
-        <convertor:Visibilityconverotr x:Key="visibiki" />
-        <convertor:AlburmcountConvertor x:Key="alburmcountconvertor" />
-        <convertor:avconvertor x:Key="avconvertor" />
-        <convertor:DistanceConvertor x:Key="distanceConvertor" />
-        <convertor:Alburmcountvisibilitys x:Key="alburmcountvisibilitys" />
-        <convertor:GroupImageConvertor x:Key="GroupImageConvertor" />
-        <convertor:UrlConverotrClass x:Key="UrlConverotr" />
-        <convertor:NumberToDateConvertor x:Key="NumberToDateConvertor">
-        </convertor:NumberToDateConvertor>
-        <Coding4FunConverters:BooleanToVisibilityConverter x:Key="hjfad">
-        </Coding4FunConverters:BooleanToVisibilityConverter>
-        <sys:Double x:Key="PanoramaItemHeaderFontSize">66</sys:Double>
-        <sys:String x:Key="lightgreencolor">a1cb3b</sys:String>-->
+        
         <!--<Style x:Key="PanoramaItemHeaderTextStyle" TargetType="TextBlock">
             <Setter Property="FontFamily" Value="{StaticResource PhoneFontFamilySemiLight}" />
             <Setter Property="FontSize" Value="{StaticResource PanoramaItemHeaderFontSize}" />

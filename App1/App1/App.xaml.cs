@@ -32,6 +32,9 @@ namespace App1
         public static Microsoft.ApplicationInsights.TelemetryClient TelemetryClient;
         public static PBGameUser User = null;
         public static BitmapImage bmpimage = null;
+        public static string userid = "54a1578d0cf292a17cc0669d";
+        internal static PBFeed transferfeed;
+        public static ImageSource transfersource = null;
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
