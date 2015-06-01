@@ -57,6 +57,12 @@
       <HintPath>..\protobuf-csharp-port-2.4.1.521-release-binaries\Release\portable-net40+sl4+sl5+wp7+wp8+win8\Google.ProtocolBuffersLite.Serialization.dll</HintPath>
     </Reference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="ReadMe.Coding4Fun.Toolkit.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

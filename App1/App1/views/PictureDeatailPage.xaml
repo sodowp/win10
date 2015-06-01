@@ -8,6 +8,11 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Button Content="后退" HorizontalAlignment="Left" Margin="12,0,0,0" VerticalAlignment="Top"  x:Name="backbtn"   Click="backbtn_Click"/>
         <Pivot Grid.Row="1">
             <PivotItem Header="图片">
                 <Image x:Name="picdetail"></Image>

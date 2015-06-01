@@ -8,22 +8,46 @@
     mc:Ignorable="d" Loaded="Page_Loaded">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="132,52,0,0" VerticalAlignment="Top"/>
-        <CaptureElement HorizontalAlignment="Left" Height="100" Margin="112,110,0,0" VerticalAlignment="Top" Width="100"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="12,0,0,0" VerticalAlignment="Top"  x:Name="backbtn"   Click="backbtn_Click"/>
+        <!--<CaptureElement HorizontalAlignment="Left" Height="100" Margin="112,110,0,0" VerticalAlignment="Top" Width="100"/>-->
 
         <Pivot Grid.Row="1">
             <PivotItem Header="最新图片">
-                <ItemsControl>
-                    <Image></Image>
-                    <Image></Image>
-                    <Image></Image>
-                    <Image></Image>
+                <ItemsControl x:Name="xItems">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapGrid Orientation="Horizontal">
+                                
+                            </WrapGrid>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
                     <Button Content="注册"  x:Name="rebtn" Click="rebtn_Click"></Button>
                     <Button Content="登录"  x:Name="loginbtn" Click="loginbtn_Click"></Button>
                     <Button Content="图文配"  x:Name="tuwenbtn" Click="tuwenbtn_Click"></Button>
                     <Button Content="修图"  x:Name="addeffectbtn" Click="addeffectbtn_Click"></Button>
                     <Button Content="上传"  x:Name="uploadbtn" Click="uploadbtn_Click"></Button>
                 </ItemsControl>
+                <!--<ItemsControl>
+                    <ItemsControl.Template>
+                        <ControlTemplate>
+                            <WrapGrid>
+                                --><!--<Image></Image>
+                                <Image></Image>
+                                <Image></Image>
+                                <Image></Image>--><!--
+                               
+                            </WrapGrid>
+                        </ControlTemplate>
+                           
+                 
+                    </ItemsControl.Template>
+                   
+                    
+                </ItemsControl>-->
             </PivotItem>
             <PivotItem Header="推荐图片">
                 <ListBox x:Name="listbox">

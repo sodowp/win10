@@ -215,5 +215,16 @@ namespace App1
         {
             this.Frame.Navigate(typeof(LoginPage));
         }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void backbtn_Click(object sender, RoutedEventArgs e)
+        {
+            if(this.Frame.CanGoBack)
+            this.Frame.GoBack();
+        }
     }
 }

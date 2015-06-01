@@ -39,6 +39,11 @@ namespace App1.views
             App.bmpimage = null;
             base.OnNavigatedFrom(e);
         }
+        private void backbtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (this.Frame.CanGoBack)
+                this.Frame.GoBack();
+        }
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
            // loadimg.Source = App.bmpimage;

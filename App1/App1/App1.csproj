@@ -128,7 +128,9 @@
     </AppxManifest>
     <None Include="App1_TemporaryKey.pfx" />
     <None Include="ApplicationInsights.config" />
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Image\about1300.jpg" />
@@ -208,6 +210,7 @@
     <Content Include="Assets\SplashScreen.scale-100.png" />
     <Content Include="Assets\StoreLogo.scale-100.png" />
     <Content Include="Assets\WideLogo.scale-100.png" />
+    <Content Include="ReadMe.Coding4Fun.Toolkit.txt" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -244,6 +247,14 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Coding4Fun.Toolkit, Version=2.0.8.0, Culture=neutral, PublicKeyToken=c5fd7b72b1a17ce4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Coding4Fun.Toolkit.Controls.2.1.0\lib\netcore451\Coding4Fun.Toolkit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Coding4Fun.Toolkit.Controls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=c5fd7b72b1a17ce4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Coding4Fun.Toolkit.Controls.2.1.0\lib\netcore451\Coding4Fun.Toolkit.Controls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Google.ProtocolBuffers, Version=2.4.1.521, Culture=neutral, PublicKeyToken=55f7125234beb589, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\protobuf-csharp-port-2.4.1.521-release-binaries\Release\portable-net40+sl4+sl5+wp7+wp8+win8\Google.ProtocolBuffers.dll</HintPath>
