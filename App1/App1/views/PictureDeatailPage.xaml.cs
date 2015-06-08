@@ -90,6 +90,7 @@ namespace App1.views
                     Debug.WriteLine(datuurl + "dataurl");
                     Debug.WriteLine(OnepbFeed.OpusImage);
                 }
+
                 Debug.WriteLine(OnepbFeed.OpusImage);
                 Debug.WriteLine(OnepbFeed);
 
@@ -123,7 +124,7 @@ namespace App1.views
             Dictionary<string, string> goiDictionary = new Dictionary<string, string>();
             goiDictionary.Add(CommonString.reqkey, CommonString.MethName.goi.ToString());
             goiDictionary.Add(CommonString.fidkey, opusid);
-            goiDictionary.Add(CommonString.uidkey, App.User.UserId);
+            goiDictionary.Add(CommonString.uidkey, App.userid);
             goiDictionary.Add(CommonString.appkey, CommonString.appValue);
             goiDictionary.Add(CommonString.formatkey, CommonString.formatValue);
             goiDictionary.Add(CommonString.rdmkey, "1");
@@ -154,7 +155,7 @@ namespace App1.views
                                     //numbertb.Visibility = Visibility.Visible;
 
                                 }
-                                if (feed.UserId == App.User.UserId)
+                                if (feed.UserId == App.userid)
                                 {
                                   //  addduotuimage.Visibility = Visibility.Visible;
                                 }

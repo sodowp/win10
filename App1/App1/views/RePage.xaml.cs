@@ -1,4 +1,5 @@
 ﻿using hdsense;
+using Newtonsoft.Json;
 using sodoshot.Common;
 using sodoshot.network;
 using System;
@@ -30,6 +31,7 @@ namespace App1.views
     public sealed partial class RePage : Page
     {
         private string xnumber;
+        private GETNUMBERJSONClass deserializedProduct2;
 
         public RePage()
         {
@@ -184,14 +186,34 @@ namespace App1.views
                         string[] result = streamstr.Split(chars, StringSplitOptions.RemoveEmptyEntries);
                         if (result[result.Length - 1] == "0")
                         {
-                            Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
-                            {
+                            //Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
+                            //{
                                 
-                                idtb.Text = result[2].Replace("\"", "");
-                                xnumber = result[2].Replace("\"", "");
+                            //    idtb.Text = result[2].Replace("\"", "");
+                            //    xnumber = result[2].Replace("\"", "");
                                
                                 
-                            });
+                            //});
+                            deserializedProduct2 = (GETNUMBERJSONClass)JsonConvert.DeserializeObject(streamstr, typeof(GETNUMBERJSONClass));
+                            //string[] chars = new string[] { ":", "}" };
+                            //string[] result = streamstr.Split(chars, StringSplitOptions.RemoveEmptyEntries);
+                            if (deserializedProduct2.ret == "0")
+                            {
+                                Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
+                                {
+                                   // progressBar.Visibility = Visibility.Collapsed;
+                                    //TextBlock idtb = (pCustomMessageBox.Content as RegisterpopControl).FindName("idtb") as TextBlock;
+                                    if (idtb != null)
+                                    {
+                                        idtb.Text = deserializedProduct2.dat.xn;
+                                        xnumber = deserializedProduct2.dat.xn;
+                                    }
+                                });
+                            }
+                            else
+                            {
+
+                            }
                         }
                         else
                         {
@@ -341,25 +363,46 @@ namespace App1.views
                 {
                     string streamstr = string.Empty;
                     streamstr = reader.ReadToEnd();
-                    string[] chars = new string[] { ":", "}" };
-                    string[] result = streamstr.Split(chars, StringSplitOptions.RemoveEmptyEntries);
-                    if (result[result.Length - 1] == "0")
+                    //string[] chars = new string[] { ":", "}" };
+                    //string[] result = streamstr.Split(chars, StringSplitOptions.RemoveEmptyEntries);
+                    deserializedProduct2 = (GETNUMBERJSONClass)JsonConvert.DeserializeObject(streamstr, typeof(GETNUMBERJSONClass));
+                    //string[] chars = new string[] { ":", "}" };
+                    //string[] result = streamstr.Split(chars, StringSplitOptions.RemoveEmptyEntries);
+                    if (deserializedProduct2.ret == "0")
                     {
                         Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
                         {
                             //progressBar.Visibility = Visibility.Collapsed;
                             //TextBlock idtb = (pCustomMessageBox.Content as RegisterpopControl).FindName("idtb") as TextBlock;
-                            //if (idtb != null)
-                            //{
-                                idtb.Text = result[2].Replace("\"", "");
-                                xnumber = result[2].Replace("\"", "");
-                            //}
+                            if (idtb != null)
+                            {
+                                idtb.Text = deserializedProduct2.dat.xn;
+                                xnumber = deserializedProduct2.dat.xn;
+                            }
                         });
                     }
                     else
                     {
 
                     }
+                    //if (result[result.Length - 1] == "0")
+                    //{
+
+                    //    Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
+                    //    {
+                    //        //progressBar.Visibility = Visibility.Collapsed;
+                    //        //TextBlock idtb = (pCustomMessageBox.Content as RegisterpopControl).FindName("idtb") as TextBlock;
+                    //        //if (idtb != null)
+                    //        //{
+                    //            idtb.Text = result[2].Replace("\"", "");
+                    //            xnumber = result[2].Replace("\"", "");
+                    //        //}
+                    //    });
+                    //}
+                    //else
+                    //{
+
+                    //}
                 }
             });
         }

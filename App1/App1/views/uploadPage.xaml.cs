@@ -149,17 +149,20 @@ namespace App1.views
             //    foreach (var item in fileList)
             //    {
             //原图
-            IRandomAccessStream randomAccessStream = await fileList.OpenReadAsync();
-           
-
-            BitmapImage bmp = new BitmapImage();
-            bmp.SetSource(randomAccessStream);
+            if (fileList != null)
+            {
+                IRandomAccessStream randomAccessStream = await fileList.OpenReadAsync();
 
 
-            loadimg.Source = bmp;
-            Stream stream = randomAccessStream.AsStream();
-            imagedate = new byte[stream.Length];
-            stream.Read(imagedate, 0, (int)stream.Length);
+                BitmapImage bmp = new BitmapImage();
+                bmp.SetSource(randomAccessStream);
+
+
+                loadimg.Source = bmp;
+                Stream stream = randomAccessStream.AsStream();
+                imagedate = new byte[stream.Length];
+                stream.Read(imagedate, 0, (int)stream.Length);
+            }
             //ImageItem imageItemBig = new ImageItem();
             //imageItemBig.ImageBig.SetSource(randomAccessStream);
             //imageItemListBig.Add(imageItemBig);
