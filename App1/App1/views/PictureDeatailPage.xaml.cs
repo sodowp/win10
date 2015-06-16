@@ -31,6 +31,7 @@ namespace App1.views
         public PictureDeatailPage()
         {
             this.InitializeComponent();
+           
         }
         protected override void OnNavigatedFrom(NavigationEventArgs e)
         {
@@ -288,6 +289,7 @@ namespace App1.views
                 }
             });
         }
+        //protected override 
         public void setActionOnOpus(string acttype)
         {
             // progressBar.Visibility = Visibility.Visible;
@@ -391,6 +393,11 @@ namespace App1.views
 
                 }
             });
+        }
+
+        private void commentbtn_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

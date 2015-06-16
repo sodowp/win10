@@ -56,6 +56,10 @@
     <Reference Include="Google.ProtocolBuffersLite.Serialization">
       <HintPath>..\protobuf-csharp-port-2.4.1.521-release-binaries\Release\portable-net40+sl4+sl5+wp7+wp8+win8\Google.ProtocolBuffersLite.Serialization.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="ReadMe.Coding4Fun.Toolkit.txt" />

@@ -73,7 +73,7 @@
                     <!--<Border  Grid.Column="0" >
                     
                 </Border>-->
-                    <Image Grid.Row="0" Margin="0,0,0,0"  Stretch="Fill" Tapped="loadimg_Tapped" x:Name="loadimg" Source="/Image/load135-2.jpg"></Image>
+                    <Image Grid.Row="0" Margin="0,0,0,0"   MaxHeight="200" Stretch="Fill" Tapped="loadimg_Tapped" x:Name="loadimg" Source="/Image/load135-2.jpg"></Image>
                     <!--<StackPanel  Grid.Row="1" Grid.Column="0" Orientation="Horizontal">
                         <TextBlock VerticalAlignment="Center" Foreground="Black"  x:Name="tbup" HorizontalAlignment="Left"  TextAlignment="Center" Margin="10,6,10,4" TextWrapping="Wrap" Text=""  Width="100" Height="30"/>
                         --><!--<Button Visibility="Collapsed" FontSize="15" Click="Button_Click" BorderThickness="0" Content="旋转90度" Foreground="Black" Margin="0,0,0,-14"/>--><!--
@@ -94,7 +94,26 @@
                     <TextBox TextWrapping="Wrap"  AcceptsReturn="True"   x:Name="destbox" MinHeight="150"  Grid.Row="0" ></TextBox>
 
                 </Grid>
-                <Button Content="上传" Click="Button_Click_1" Grid.Row="3" HorizontalAlignment="Center"  VerticalAlignment="Top"/>
+                    <ItemsControl x:Name="xItems" Grid.Row="3"   >
+                        <ItemsControl.Items>
+                            <DataTemplate>
+                                <TextBlock  Text="{Binding }"></TextBlock>
+                            </DataTemplate>
+                        </ItemsControl.Items>
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapGrid Orientation="Horizontal" MaximumRowsOrColumns="3">
+
+                                </WrapGrid>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <!--<ItemsControl.Template>
+                            <ControlTemplate>
+                                <TextBlock  Text="{Binding }"></TextBlock>
+                            </ControlTemplate>
+                        </ItemsControl.Template>-->
+                    </ItemsControl>
+                    <Button Content="上传" Click="Button_Click_1" Grid.Row="4" HorizontalAlignment="Stretch"  VerticalAlignment="Top"/>
                 <!--<StackPanel Grid.Row="3" Orientation="Horizontal" VerticalAlignment="Center">
                     <TextBlock VerticalAlignment="Center" Margin="12,0,0,0" Text="" Grid.Row="3" ></TextBlock>
                     <CheckBox  Margin="200,0,0,0" BorderBrush="YellowGreen"  Unchecked="can_Unchecked" Checked="can_Checked" Foreground="Black" IsThreeState="False" x:Name="isagreecheckbox"></CheckBox>

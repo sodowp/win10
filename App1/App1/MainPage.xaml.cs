@@ -12,6 +12,7 @@ using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Storage.Pickers;
 using Windows.Storage.Streams;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -157,10 +158,19 @@ namespace App1
             this.Frame.Navigate(typeof(tuwenPage));
         }
 
-        private void uploadbtn_Click(object sender, RoutedEventArgs e)
+        private async void uploadbtn_Click(object sender, RoutedEventArgs e)
         {
-         //   getpicfile();
-            this.Frame.Navigate(typeof(uploadPage));
+            //   getpicfile();
+            if (App.userid == "54a1578d0cf292a17cc0669d")
+            {
+                MessageDialog msg = new MessageDialog("请先注册或者登录");
+                msg.Title = "提示";
+                var msginfo = await msg.ShowAsync();
+            }
+            else
+            {
+                this.Frame.Navigate(typeof(uploadPage));
+            }
         }
         private async void getpicfile()
         {
@@ -218,7 +228,7 @@ namespace App1
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-
+             
         }
 
         private void backbtn_Click(object sender, RoutedEventArgs e)

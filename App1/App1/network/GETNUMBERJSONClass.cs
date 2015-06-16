@@ -10,11 +10,11 @@ namespace sodoshot.network
     {
       public XNNEWjson dat { get; set; }
 
-        public string ret { get; set; }
+        public int ret { get; set; }
     }
   public class XNNEWjson
   {
-      public string url { get; set; }
+      public string qrurl { get; set; }
       public string xn { get; set; }
       //public string img { get; set; }
       //public string timg { get; set; }

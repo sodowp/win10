@@ -20,16 +20,17 @@
                 <ItemsControl x:Name="xItems">
                     <ItemsControl.ItemsPanel>
                         <ItemsPanelTemplate>
-                            <WrapGrid Orientation="Horizontal">
+                            <WrapGrid Orientation="Horizontal" MaximumRowsOrColumns="3">
                                 
                             </WrapGrid>
                         </ItemsPanelTemplate>
                     </ItemsControl.ItemsPanel>
-                    <Button Content="注册"  x:Name="rebtn" Click="rebtn_Click"></Button>
-                    <Button Content="登录"  x:Name="loginbtn" Click="loginbtn_Click"></Button>
-                    <Button Content="图文配"  x:Name="tuwenbtn" Click="tuwenbtn_Click"></Button>
-                    <Button Content="修图"  x:Name="addeffectbtn" Click="addeffectbtn_Click"></Button>
-                    <Button Content="上传"  x:Name="uploadbtn" Click="uploadbtn_Click"></Button>
+                    <Button Content="注册"  Margin="0,0,21,21" Background="Orange" x:Name="rebtn" Click="rebtn_Click"></Button>
+                    <Button Content="登录"  Margin="0,0,21,21" Background="Orange" x:Name="loginbtn" Click="loginbtn_Click"></Button>
+                    <Button Content="上传"  Margin="0,0,21,21" Background="Orange" x:Name="uploadbtn" Click="uploadbtn_Click" Visibility="Visible"></Button>
+                    <Button Content="图文配"  Margin="0,0,21,21" Background="Orange" x:Name="tuwenbtn" Click="tuwenbtn_Click" Visibility="Collapsed"></Button>
+                    <Button Content="修图"  Margin="0,0,21,21" Background="Orange" x:Name="addeffectbtn" Click="addeffectbtn_Click" Visibility="Collapsed"></Button>
+                   
                 </ItemsControl>
                 <!--<ItemsControl>
                     <ItemsControl.Template>

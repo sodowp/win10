@@ -14,20 +14,20 @@
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
             <StackPanel Height="65" Background="#009688" VerticalAlignment="Top" Orientation="Horizontal">
-                <TextBlock Margin="150,10,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Text="注册"></TextBlock>
+                <TextBlock Margin="165,10,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="Collapsed" Text="注册" Foreground="White"></TextBlock>
                 <Image ></Image>
             </StackPanel>
             <Grid Grid.Row="1" Background="White">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"></RowDefinition>
                     <RowDefinition></RowDefinition>
-                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto" MinHeight="150"></RowDefinition>
                 </Grid.RowDefinitions>
                 <!--<TextBlock Foreground="Black" Text="注册"></TextBlock>-->
                 <TextBlock   Foreground="Black" Margin="100,20,0,0" Grid.Row="1" x:Name="idtb" Text=""></TextBlock>
                 <StackPanel Margin="0,0,0,50" HorizontalAlignment="Center" Grid.Row="2" Orientation="Horizontal">
-                    <Button Background="Orange"  x:Name="chongxinbtn" Content="重新获得" Click="chongxinbtn_Click" Foreground="Black"></Button>
-                    <Button Background="#009688" x:Name="lijiebtn" Content="使用此号" Click="lijiebtn_Click" Foreground="Black"></Button>
+                    <Button Background="Orange" Margin="0,0,21,0"  x:Name="chongxinbtn" Content="重新获得" Click="chongxinbtn_Click" Foreground="White"></Button>
+                    <Button Background="#009688" x:Name="lijiebtn" Content="使用此号" Click="lijiebtn_Click" Foreground="White"></Button>
                 </StackPanel>
             </Grid>
         </Grid>

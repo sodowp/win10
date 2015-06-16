@@ -10,6 +10,7 @@ using System.Net;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -145,6 +146,10 @@ namespace App1.views
                                 //}
                                 Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
                                 {
+                                    MessageDialog msg = new MessageDialog("登录成功");
+                                    msg.Title = "提示";
+                                    //  msg.
+                                    var msginfo = msg.ShowAsync();
                                     this.Frame.GoBack();
                                     //progressBar.Visibility = Visibility.Collapsed;
                                     //App.RootFrame.Navigate(new Uri("/MainPage.xaml", UriKind.RelativeOrAbsolute));
@@ -166,6 +171,10 @@ namespace App1.views
                         {
                             //progressBar.Visibility = Visibility.Collapsed;
                             //MessageBox.Show("网络异常");
+                            MessageDialog msg = new MessageDialog("登录失败");
+                            msg.Title = "提示";
+                          //  msg.
+                            var msginfo =  msg.ShowAsync();
                         });
                     }
                     catch (Exception ex2)

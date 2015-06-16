@@ -197,7 +197,7 @@ namespace App1.views
                             deserializedProduct2 = (GETNUMBERJSONClass)JsonConvert.DeserializeObject(streamstr, typeof(GETNUMBERJSONClass));
                             //string[] chars = new string[] { ":", "}" };
                             //string[] result = streamstr.Split(chars, StringSplitOptions.RemoveEmptyEntries);
-                            if (deserializedProduct2.ret == "0")
+                            if (deserializedProduct2.ret == 0)
                             {
                                 Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
                                 {
@@ -368,7 +368,7 @@ namespace App1.views
                     deserializedProduct2 = (GETNUMBERJSONClass)JsonConvert.DeserializeObject(streamstr, typeof(GETNUMBERJSONClass));
                     //string[] chars = new string[] { ":", "}" };
                     //string[] result = streamstr.Split(chars, StringSplitOptions.RemoveEmptyEntries);
-                    if (deserializedProduct2.ret == "0")
+                    if (deserializedProduct2.ret == 0)
                     {
                         Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
                         {

@@ -33,6 +33,24 @@ namespace App1.views
         public uploadPage()
         {
             this.InitializeComponent();
+            atr.Add("人像");
+            atr.Add("风光"); atr.Add("纪实"); atr.Add("静物"); atr.Add("旅行"); atr.Add("生活"); atr.Add("动物"); atr.Add("植物"); atr.Add("艺术"); atr.Add("手机");
+            atr.Add("创意"); atr.Add("微距"); atr.Add("婚礼"); atr.Add("街拍");
+            xItems.ItemsSource = atr;
+
+
+
+
+
+
+            
+            
+            
+            
+            
+            
+            
+            
         }
         protected override void OnNavigatedFrom(NavigationEventArgs e)
         {
@@ -171,10 +189,10 @@ namespace App1.views
             //}
 
         }
-
+        List<string> atr=new List<string>();
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+           
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
